@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Open Datasheets",
+  "version": "1.0",
+  "description": "Instantly open component datasheets from Google Search. Type datasheet:LM7805 or ds:LM7805.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.com/search*"],
+      "js": ["content.js"],
+      "css": ["notification.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
